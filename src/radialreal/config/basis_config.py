@@ -1,14 +1,11 @@
-from typing import final, Literal
+from typing import final, Literal, TypeAlias
 from pydantic import Field, model_validator
 
 from .forzen_config import FrozenBaseModel
 
-Basis = Literal["log", 'uniform']
-
-
 @final
 class BasisConfigLog(FrozenBaseModel):
-    basis: Basis
+    basis: Literal["log"]
     r_max: float = Field(gt=0, description="Maximum radius")
     r_min: float = Field(gt=0, description="Minimum radius")
     n_points: int = Field(gt=0, description="Number of points")
@@ -21,7 +18,7 @@ class BasisConfigLog(FrozenBaseModel):
 
 @final
 class BasisConfigUniform(FrozenBaseModel):
-    basis: Basis
+    basis: Literal["uniform"]
     r_max: float = Field(gt=0, description="Maximum radius")
     r_min: float = Field(gt=0, description="Minimum radius")
     n_points: int = Field(gt=0, description="Number of points")

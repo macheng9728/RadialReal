@@ -2,9 +2,9 @@
 theory = "ofdft"
 kedf = "tf"
 xc = "lda"
-coulomb = true
-solver = "dem"
+coulomb = "all"
 e_tolrance = 1e-6
+kedf_parameters = [1.00,2.0,]
 
 [solver_conf]
 solver = "dem"
@@ -12,11 +12,11 @@ max_loop = 300
 method = "lbfgs"
 
 [potential_conf]
-potential = "ae"
+potential = "none"
 zion = 1.0
 
 [basis_conf]
-basis = "log"
-r_max = 1e-5
-r_min = 72
+basis = "uniform"
+r_max = 80
+r_min = 1e-5
 n_points = 500
