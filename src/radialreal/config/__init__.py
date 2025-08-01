@@ -19,8 +19,9 @@ def load_config(path: Path) -> dict:
         raise
 
 def print_config(config: dict) -> None:
-    custom_order = ['system', 'theory', 'potential', 'solver', 'basis']
-    ordered_config = OrderedDict()
-    for key in custom_order:
-        ordered_config[key] = config[key]
-    pprint.pprint(ordered_config)
+    #custom_order = ['system', 'theory', 'potential', 'solver', 'basis']
+    #ordered_config = OrderedDict()
+    #for key in custom_order:
+    #    ordered_config[key] = config[key]
+    # pprint.pprint(ordered_config)
+    pprint.pprint(config)

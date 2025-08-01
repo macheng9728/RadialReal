@@ -1,0 +1,26 @@
+[theory_conf]
+theory = "ofdft"
+kedf = "tf"
+xc = "lda"
+coulomb = true
+solver = "dem"
+e_tolrance = 1e-6
+
+[solver_conf]
+solver = "oescf"
+max_inner_loop = 300
+max_outer_loop = 300
+
+dem_method = "lbfgs"
+
+
+
+[potential_conf]
+potential = "ae"
+zion = 1.0
+
+[basis_conf]
+basis = "log"
+r_max = 1e-5
+r_min = 72
+n_points = 500

@@ -1,24 +1,22 @@
-[system]
+[theory_conf]
 theory = "ofdft"
-potential_type = "ae"
-basis = "log"
-solver = "dem"
-
-[theory]
 kedf = "tf"
 xc = "lda"
 coulomb = true
 solver = "dem"
 e_tolrance = 1e-6
 
-[solver]
-max_cycle = 300
+[solver_conf]
+solver = "dem"
+max_loop = 300
 method = "lbfgs"
 
-[potential]
+[potential_conf]
+potential = "ae"
 zion = 1.0
 
-[basis]
+[basis_conf]
+basis = "log"
 r_max = 1e-5
 r_min = 72
 n_points = 500
