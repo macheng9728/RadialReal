@@ -14,7 +14,7 @@ def main():
     print("### RR begin o0v0o ###")
     # read input file
     config=load_config(Path(args.input))
-    print_config(config)
+    print(config)
     # print input file
 
 if __name__ == '__main__':

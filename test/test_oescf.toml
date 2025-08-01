@@ -21,6 +21,6 @@ zion = 1.0
 
 [basis_conf]
 basis = "log"
-r_max = 1e-5
+r_max = 100
 r_min = 72
 n_points = 500

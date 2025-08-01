@@ -3,14 +3,16 @@ import tomllib
 import pprint
 from collections import OrderedDict
 from pathlib import Path
+from .system_config import SystemConfig
 
 __all__ = ['load_config', 'print_config']
 
-def load_config(path: Path) -> dict:
+def load_config(path: Path) -> SystemConfig:
     """ load input toml"""
     try:
         with open(path, "rb") as f:
-            return tomllib.load(f)
+            config_date=tomllib.load(f)
+            return SystemConfig(**config_date)
     except FileNotFoundError:
         logging.error(f"File {path} not found")
         raise
